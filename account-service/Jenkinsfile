@@ -14,7 +14,6 @@
             steps {
                 script {
                     docker build -t ci-ecr .
-                    docker tag ci-ecr:latest public.ecr.aws/y0j0v8z3/ci-ecr:latest
 
                     stage('Deploy') {
             steps {
