@@ -23,6 +23,7 @@
                 sh 'cd account-service'
                 sh 'ls -la'
                 sh 'cd account-service'
+                sh 'ls -la'
                 sh 'mvn clean package'
             }
         }
