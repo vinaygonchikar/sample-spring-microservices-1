@@ -18,10 +18,16 @@ pipeline {
                 }
             }
         }
+        stage('change directory') {
+            steps {
+              dir('account-service') {
+                  sh'ls -la'
+              }
+            }
+        }
         stage ('Build') {
             steps {
                 sh 'pwd'
-                sh 'cd account-service'
                 sh 'ls -la'
                 sh 'mvn clean install'
             }
@@ -49,4 +55,3 @@ pipeline {
     }
     }
 }
-
