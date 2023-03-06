@@ -20,11 +20,9 @@
         }
         stage ('Build') {
             steps {
-                sh 'cd account-service'
-                sh 'ls -la'
-                sh 'cd account-service'
-                sh 'ls -la'
                 sh 'pwd'
+                sh 'cd account-service'
+                sh 'ls -la'
                 sh 'mvn clean package'
             }
         }
