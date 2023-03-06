@@ -24,7 +24,6 @@ pipeline {
                 cd account-service
                 ls -la
                 pwd
-                mvn clean package
             }
         }
 
