@@ -13,17 +13,15 @@ pipeline {
 
         stage('Clone repository') { 
             steps { 
-                script{
-                checkout scm
-                }
+                git clone https://github.com/aru1235/sample-spring-microservices.git
             }
         }
         stage ('Build') {
             steps {
                 sh 'pwd'
-                cd account-service
-                ls -la
-                pwd
+                sh 'cd account-service'
+                sh 'ls -la'
+                sh 'pwd'
             }
         }
 
