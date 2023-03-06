@@ -1,4 +1,4 @@
- pipeline {
+pipeline {
     agent any
 
     environment {
@@ -20,10 +20,11 @@
         }
         stage ('Build') {
             steps {
-                sh 'pwd'
-                sh 'cd account-service'
-                sh 'ls -la'
-                sh 'mvn clean package'
+                pwd
+                cd account-service
+                ls -la
+                pwd
+                mvn clean package
             }
         }
 
@@ -49,3 +50,4 @@
     }
     }
 }
+
